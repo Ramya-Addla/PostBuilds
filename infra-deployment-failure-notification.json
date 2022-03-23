@@ -1,0 +1,45 @@
+{
+    "@type": "MessageCard",
+    "@context": "https://schema.org/extensions",
+    "summary": "Jenkins Pipeline",
+    "themeColor": "0078D7",
+    "title": "Infra deployment failed for the customer __CUSTOMERID__, environment type __ENVTYPE__",
+    "sections": [
+        {
+            "activityTitle": "CatMan DevOps Team",
+            "activitySubtitle": "__BUILDTIME__",
+            "activityImage": "https://kranthistorage.blob.core.windows.net/icons/catman.jpg",
+            "facts": [
+                {
+                    "name": "Customer:",
+                    "value": "__CUSTOMERID__"
+                },
+                {
+                    "name": "Environment:",
+                    "value": "__ENVTYPE__"
+                },
+                {
+                    "name": "Region",
+                    "value": "__REGIONNAME__"
+                },
+                {
+                    "name": "Size",
+                    "value": "__TSHIRTSIZE__"
+                }
+            ],
+            "text": "Infra deployment failed, for any more details contact onboardingcatman@blueyonder.com"
+        }
+    ],
+    "potentialAction": [
+        {
+            "@type": "OpenUri",
+            "name": "View in Jenkins",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "https://jenkinslss.azurewebsites.net/job/Catman-Application/job/CatMan_Application_Services/__BUILDNUMBER__/"
+                }
+            ]
+        }
+    ]
+}
