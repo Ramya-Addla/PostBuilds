@@ -1,0 +1,15 @@
+{
+    "@type": "MessageCard",
+    "@context": "https://schema.org/extensions",
+    "summary": "Jenkins Pipeline",
+    "themeColor": "0078D7",
+    "sections": [
+        {
+            "activityTitle": "CatMan DevOps Team",
+            "activitySubtitle": "__BUILDTIME__",
+            "activityImage": "https://kranthistorage.blob.core.windows.net/icons/catman.jpg",
+            "text": "Job has been started by CUSTOMERID"
+        }
+    ],
+    
+}
