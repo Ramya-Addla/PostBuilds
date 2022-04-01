@@ -3,13 +3,42 @@
     "@context": "https://schema.org/extensions",
     "summary": "Jenkins Pipeline",
     "themeColor": "0078D7",
+    "title": "Build started by customer __CUSTOMERID__ for environment __ENVTYPE__",
     "sections": [
         {
             "activityTitle": "CatMan DevOps Team",
             "activitySubtitle": "__BUILDTIME__",
             "activityImage": "https://kranthistorage.blob.core.windows.net/icons/catman.jpg",
-            "text": "Job has been started by CUSTOMERID"
+            "facts": [
+                {
+                    "name": "Customer:",
+                    "value": "__CUSTOMERID__"
+                },
+                {
+                    "name": "Environment:",
+                    "value": "__ENVTYPE__"
+                },
+                {
+                    "name": "Region",
+                    "value": "__REGIONNAME__"
+                },
+                {
+                    "name": "Size",
+                    "value": "__TSHIRTSIZE__"
+                }
+            ],
         }
     ],
-    
+    "potentialAction": [
+        {
+            "@type": "OpenUri",
+            "name": "View in Jenkins",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "https://jenkinslss.azurewebsites.net/job/Catman-Application/job/CatMan_Application_Services/__BUILDNUMBER__/"
+                }
+            ]
+        }
+    ]
 }
