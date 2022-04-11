@@ -2,5 +2,5 @@
 <gs:UserList>
 <gs:User UserID="Current" CopySettingsToDefaultUserAcct="true" CopySettingsToSystemAcct="true"/>
 </gs:UserList>
-<!-- system locale --><gs:SystemLocale Name="en-AU" />
+<!-- system locale --><gs:SystemLocale Name="en-BZ" />
 </gs:GlobalizationServices>
