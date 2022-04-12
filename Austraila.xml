@@ -19,14 +19,14 @@
 
 -<gs:UserLocale>
 
-<gs:Locale SetAsCurrent="true" Name="en-CA"/>
+<gs:Locale SetAsCurrent="true" Name="en-IN"/>
 
 </gs:UserLocale>
 
 <!-- system locale -->
 
 
-<gs:SystemLocale Name="en-CA"/>
+<gs:SystemLocale Name="en-IN"/>
 
 <!-- GeoID -->
 
@@ -34,16 +34,16 @@
 
 -<gs:LocationPreferences>
 
-<gs:GeoID Value="39"/>
+<gs:GeoID Value="113"/>
 
 </gs:LocationPreferences>
 
 
 -<gs:MUILanguagePreferences>
 
-<gs:MUILanguage Value="en-CA"/>
+<gs:MUILanguage Value="en-IN"/>
 
-<gs:MUIFallback Value="en-IN"/>
+<gs:MUIFallback Value="en-CA"/>
 
 </gs:MUILanguagePreferences>
 
