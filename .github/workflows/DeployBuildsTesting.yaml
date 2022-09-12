@@ -15,5 +15,26 @@ jobs:
           url: ${{ secrets.JFROG_URL }}
           user: ${{ secrets.JFROG_USER}}
           pass: ${{ secrets.JFROG_PASSWORD}}
+      - name: Download artifacts
+        shell: pwsh
+        run: |
 
-          
+          $executionPath = (Get-Item -Path ".\").FullName
+          Write-Host "Initial execution path - $executionPath"
+          cd..
+
+          $rootDir = (Get-Item -Path ".\").FullName
+          Write-Host "Root path - $rootDir"
+
+          $Folder= "$rootDir/spaceplanning"
+
+          If (!(test-path $Folder)) {
+          New-Item -ItemType Directory -Path $Folder
+          }
+
+          Write-Host "Artifacts path - $Folder"
+      
+          $downloadPath= "microservices-release-local/com/jda/microservice/catman/installs/$services/$services-$buildVersion.tgz"
+
+          Jfrog rt dl $downloadPath  "$Folder/" --flat=true 
+          Write-Host "Files Downloaded"
