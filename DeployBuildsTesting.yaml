@@ -15,3 +15,5 @@ jobs:
           url: ${{ secrets.JFROG_URL }}
           user: ${{ secrets.JFROG_USER}}
           pass: ${{ secrrts.JFROG_PASSWORD}}
+
+          
