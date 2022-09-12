@@ -36,5 +36,5 @@ jobs:
       
           $downloadPath= "microservices-release-local/com/jda/microservice/catman/installs/$services/$services-$buildVersion.tgz"
 
-          Jfrog rt dl $downloadPath  "$Folder/" --flat=true 
+          jfrog rt dl $downloadPath  "$Folder/" --flat=true 
           Write-Host "Files Downloaded"
