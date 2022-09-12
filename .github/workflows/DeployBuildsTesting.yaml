@@ -29,8 +29,7 @@ jobs:
           $Folder= "$rootDir/spaceplanning"
 
           If (!(test-path $Folder)) {
-          New-Item -ItemType Directory -Path $Folder
-          }
+          New-Item -ItemType Directory -Path $Folder}
 
           Write-Host "Artifacts path - $Folder"
       
