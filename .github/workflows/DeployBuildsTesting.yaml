@@ -35,8 +35,8 @@ jobs:
           New-Item -ItemType Directory -Path $Folder}
 
           Write-Host "Artifacts path - $Folder"
-      
-          $downloadPath= "microservices-release-local/com/jda/microservice/catman/installs/$Application_name/$Application_name-$SplacePlanning_Build_Version.tgz"
+          $url = "https://jdasoftware.jfrog.io/ui/login/"
+          $downloadPath= "$url/microservices-release-local/com/jda/microservice/catman/installs/$Application_name/$Application_name-$SplacePlanning_Build_Version.tgz"
 
           jfrog rt dl $downloadPath  "$Folder/" --flat=true 
           Write-Host "Files Downloaded"
